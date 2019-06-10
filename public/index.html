@@ -1,33 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Jeffr - Home of The Jeff</title>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- favicon -->
+  <link rel="icon" href="/images/theJeff.png" type="image/png">
+  <link rel="shortcut icon" href="/images/theJeff.png" type="image/png">
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i&display=swap" rel="stylesheet">
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-  </head>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-  <body>
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-    <!-- Top nav bar (fixed) -->
-    <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
-      <span class="header">Tweeter</span>
-    </nav>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/app.js"></script>
+</head>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-    </main>
+<body>
 
-  </body>
+  <!-- Top nav bar (fixed) -->
+  <nav id="nav-bar">
+    <img class="logo" src="/images/theJeff.png">
+    <span class="header">Jeffr</span>
+  </nav>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+      <section class="new-tweet">
+          <h2>Hit us with your Jeffness</h2>
+          <form action="/tweets/" method="POST">
+            <textarea name="text" placeholder="Tell us your thoughts on The Jeff"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </section>
+    <article>
+      You wanna sell some tickets, act like you know what you're talking about. go, go, go, go, go! Goodbye! We gotta
+      burn the rain forest, dump toxic waste, pollute the air, and rip up the OZONE! They're using our own satellites
+      against us.
+    </article>
+    <br>
+    <article>
+      It's nice to play a character that has a soulful, dependent, close relationship. My dad once told me, laugh and
+      the world laughs with you, Cry, and I'll give you something to cry about you little bastard! It is beets. You know
+      what? AM/FM radio, reclining bucket seats, and power windows.
+    </article>
+    <br>
+    <article>
+      Man destroys God. They're using our own satellites against us. Here's my chance. It's a delight to trust somebody
+      so completely. Hey, you know how I'm, like.
+    </article>
+    <br>
+    <footer>
+      Glorious Jeff content provided by <a href="https://jeffsum.com/">Jeffsum</a>.
+    </footer>
+  </main>
+
+</body>
+
 </html>

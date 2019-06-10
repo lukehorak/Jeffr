@@ -1,0 +1,28 @@
+nav {
+  height:80px;
+  width: 100%;
+  background-color:#00a087;
+  color:#e8fdff;
+  padding-left: 2em;
+  padding-right: 2em;
+  display:inline-block;
+  position:fixed;
+}
+
+#nav-bar .logo, .header {
+  float:left;
+}
+
+#nav-bar .logo{
+  height: 80px;
+  width: 80px;
+  margin-right:10px;
+}
+
+#nav-bar .header{
+  font-size: 2em;
+  top: 50%;
+  transform:translateY(-50%);
+  position:relative;
+  line-height: 100%;
+}
