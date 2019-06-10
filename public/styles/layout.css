@@ -16,7 +16,7 @@ html {
 
 body {
   margin: 0;
-  color: #244751;
+  color: #2A4747;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -26,6 +26,17 @@ main {
   margin: auto;
   background: #ffffff;
   padding-top: 80px;
+}
+
+#tweets article{
+  border-style: solid;
+  border-width: 0.07em;
+  border-color: #cccccc;
+  border-radius: 3px;
+  padding:0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
 }
 
 footer {

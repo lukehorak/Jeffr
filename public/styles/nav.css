@@ -1,12 +1,13 @@
 nav {
   height:80px;
   width: 100%;
-  background-color:#00a087;
-  color:#e8fdff;
+  background-image:linear-gradient(to top right, #2A4747, #439775);
+  color: #61D095;
   padding-left: 2em;
   padding-right: 2em;
   display:inline-block;
   position:fixed;
+  z-index: 1;
 }
 
 #nav-bar .logo, .header {
@@ -15,7 +16,6 @@ nav {
 
 #nav-bar .logo{
   height: 80px;
-  width: 80px;
   margin-right:10px;
 }
 
