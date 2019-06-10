@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Jefft is a simple, single-page, Jeff Goldblum-themed Twitter clone.
+Jeffr is a simple, single-page, Jeff Goldblum-themed Twitter clone. (Jeffness provided courtesy of [Jeffsum](https://github.com/chlorophyllkid/jeffsum))
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
 
