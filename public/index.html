@@ -11,6 +11,7 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css" />
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i&display=swap" rel="stylesheet">
 
   <!-- App CSS -->
@@ -24,6 +25,8 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/app.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/tweet-age.js"></script>
+  <script type="text/javascript" src="/scripts/reset.js"></script>
 </head>
 
 <body>
@@ -40,34 +43,33 @@
       <h2>Hit us with your Jeffness</h2>
       <form action="/tweets/" method="POST">
         <textarea name="text" placeholder="Tell us your thoughts on The Jeff"></textarea>
-        <input type="submit" value="Tweet">
+        <input type="submit" value="Jeff it">
         <span class="counter">140</span>
       </form>
     </section>
     <section id="tweets">
-      <article>
-        God creates dinosaurs, God destroys dinosaurs. God creates Man, man destroys God. Man creates dinosaurs...
+      <article class="tweet">
+        <header>
+          <div class="profile">
+            <img src="/images/DrJeffMalcom.jpg" />
+            <h2>Dr. Jeff Malcom</h2>
+          </div>
+          <span class="handle">@ChaosTheory</span>
+        </header>
+        <p class="tweet-content">God creates dinosaurs, God destroys dinosaurs. God creates Man, man destroys God. Man creates dinosaurs...
+        </p>
+        <footer>
+          <p class="timestamp">1560278552379</p>
+          <div class="like-share">
+            <i class="fa fa-flag"></i>
+            <i class="fa fa-retweet"></i>
+            <i class="fa fa-heart"></i>
+          </div>
+        </footer>
       </article>
     </section>
-    <br>
-    <article>
-      Life breaks free, it expands to new territories and crashes through barriers, painfully, maybe even dangerously,
-      but, uh well there it is.
-    </article>
-    <br>
-    <article>
-      It's nice to play a character that has a soulful, dependent, close relationship. My dad once told me, laugh and
-      the world laughs with you, Cry, and I'll give you something to cry about you little bastard! It is beets. You know
-      what? AM/FM radio, reclining bucket seats, and power windows.
-    </article>
-    <br>
-    <article>
-      Man destroys God. They're using our own satellites against us. Here's my chance. It's a delight to trust somebody
-      so completely. Hey, you know how I'm, like.
-    </article>
-    <br>
     <footer>
-      Glorious Jeff content provided by <a href="https://jeffsum.com/">Jeffsum</a>.
+      Jeffness provided by <a href="https://jeffsum.com/">Jeffsum</a>.
     </footer>
   </main>
 
