@@ -4,8 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const jeffData = [
-  {
+const jeffData = [{
     "user": {
       "name": "Dr. Jeff Malcom",
       "avatars": {
@@ -52,6 +51,12 @@ const jeffData = [
   }
 ];
 
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 createLikeShare = () => {
   const $flag = $("<i>").addClass("fa fa-flag");
   const $retweet = $("<i>").addClass("fa fa-retweet");
@@ -63,47 +68,41 @@ createTweetElement = (tweetObj) => {
 
   // Create profile div
   const $img = $("<img>").attr("src", tweetObj.user.avatars.regular);
-  const $name = $(`<h2>${tweetObj.user.name}</h2>`);
+  const $name = $("<h2>").text(tweetObj.user.name);
   const $prof = $("<div>").addClass("profile").append($img, $name);
 
   // Create handle and builld <header>
-  const $handle = $(`<span>${tweetObj.user.handle}</span>`).addClass("handle");
+  const $handle = $(`<span>`).text(tweetObj.user.handle).addClass("handle");
   const $header = $("<header>").append($prof, $handle);
 
   // Tweet content
-  const $tweetText = $(`<p>${tweetObj.content.text}</p>`).addClass("tweet-content");
+  const $tweetText = $("<p>").text(tweetObj.content.text).addClass("tweet-content");
 
   // Footer
 
-  // 
-  const $timestamp = $(`<p>${tweetObj.created_at}</p>`).addClass("timestamp");
+  const $timestamp = $("<p>").text(timeAgo(tweetObj.created_at)).addClass("timestamp");
   const $likeShare = createLikeShare();
   const $footer = $("<footer>").append($timestamp, $likeShare);
 
   const $tweet = $("<article>").addClass("tweet").append($header, $tweetText, $footer);
+
   return $tweet;
 };
 
 function renderTweets(tweets) {
-  for (let tweet of tweets) {
-    $('#tweets').append(createTweetElement(tweet));
+  for (var tweet in tweets) {
+    $('#tweets').append(createTweetElement(tweets[tweet]));
   }
 }
 
 $(document).ready(function () {
   for (let tweet of jeffData) {
-    $('#tweets').append(createTweetElement(tweet).fadeIn(1200));
+    // Use an IIFE to render tweets one at a time
+    let i = jeffData.indexOf(tweet);
+    (function (i) {
+      setTimeout(function () {
+        $('#tweets').append(createTweetElement(tweet).fadeIn(1200));
+      }, 400 * i);
+    })(i);
   }
 });
-
-// $(document).ready(function () {
-//   for (let tweet of jeffData) {
-//     // Render tweets one at a time
-//     let i = jeffData.indexOf(tweet);
-//     (function(i) {
-//       setTimeout(function(){
-//         $('#tweets').append(createTweetElement(tweet).fadeIn(1200));
-//       }, 400*i);
-//     })(i);
-//   }
-// });

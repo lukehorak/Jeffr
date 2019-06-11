@@ -46,11 +46,3 @@ function timeAgo(ts) {
    // Default condition
    return "Unable to calculate age"
 }
-
-$(document).ready(function () {
-
-   $('.timestamp').each(function () {
-      let stamp = $(this).text();
-      $(this).text(timeAgo(stamp))
-   })
-});
