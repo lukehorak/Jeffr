@@ -4,7 +4,23 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const jeffData = [{
+const jeffData = [
+  {
+    "user": {
+      "name": "Dr. Jeff Malcom",
+      "avatars": {
+        "small": "/images/DrJeffMalcom.jpg",
+        "regular": "/images/DrJeffMalcom.jpg",
+        "large": "/images/DrJeffMalcom.jpg"
+      },
+      "handle": "@ChaosTheory"
+    },
+    "content": {
+      "text": "God creates dinosaurs, God destroys dinosaurs. God creates Man, man destroys God. Man creates dinosaurs..."
+    },
+    "created_at": 1560278552379
+  },
+  {
     "user": {
       "name": "Grandmaster Jeff",
       "avatars": {
@@ -79,3 +95,15 @@ $(document).ready(function () {
     $('#tweets').append(createTweetElement(tweet).fadeIn(1200));
   }
 });
+
+// $(document).ready(function () {
+//   for (let tweet of jeffData) {
+//     // Render tweets one at a time
+//     let i = jeffData.indexOf(tweet);
+//     (function(i) {
+//       setTimeout(function(){
+//         $('#tweets').append(createTweetElement(tweet).fadeIn(1200));
+//       }, 400*i);
+//     })(i);
+//   }
+// });
