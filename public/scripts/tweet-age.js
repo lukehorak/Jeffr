@@ -3,9 +3,10 @@ function timeAgo(ts) {
    // provided timestamp and the current time, then test
    // the delta for predefined ranges.
 
-   var d = new Date(); // Gets the current time
+   var d = new Date();
    var nowTs = d.getTime();
-   var seconds = Math.floor((nowTs - ts) / 1000); // Get diff of Miliseconds, divide by 1000 to get seconds for calcs later
+   // Get diff of Miliseconds, divide by 1000 to get seconds for calcs later
+   var seconds = Math.floor((nowTs - ts) / 1000);
 
    // more than a year
    if(seconds > 365 * 24* 3600){
