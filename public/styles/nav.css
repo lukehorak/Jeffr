@@ -1,8 +1,19 @@
+/* Because I've shuffled colour schemes 9001 times*/
+:root{
+  /* --bot-grad: #2A4747;
+  --top-grad: #439775;
+  --nav-color: #61D095; */
+
+  --bot-grad: #A24936;
+  --top-grad: #D36135;
+  --nav-color: #282B28;
+}
+
 nav {
   height:80px;
   width: 100%;
-  background-image:linear-gradient(to top right, #2A4747, #439775);
-  color: #61D095;
+  background-image:linear-gradient(to top right, var(--bot-grad), var(--top-grad));
+  color: var(--nav-color);
   padding-left: 2em;
   padding-right: 2em;
   display:inline-block;
