@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 const jeffData = [{
     "user": {
       "name": "Dr. Jeff Malcom",
@@ -90,8 +84,9 @@ createTweetElement = (tweetObj) => {
 };
 
 function renderTweets(tweets) {
+  const $tweets = $('#tweets');
   for (var tweet in tweets) {
-    $('#tweets').append(createTweetElement(tweets[tweet]));
+    $tweets.append(createTweetElement(tweets[tweet]));
   }
 }
 
