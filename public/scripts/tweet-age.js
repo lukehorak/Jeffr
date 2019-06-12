@@ -41,7 +41,7 @@ function timeAgo(ts) {
       return seconds + " seconds ago";
    }
    // Just now
-   if (seconds > 0){
+   if (seconds > -1){
       return "Just a moment ago"
    }
    // Default condition
