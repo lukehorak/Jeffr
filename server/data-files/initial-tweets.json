@@ -1,46 +1,46 @@
-[
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": {
-        "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
-        "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-        "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
-      },
-      "handle": "@SirIsaac"
+[{
+  "user": {
+    "name": "Dr. Jeff Malcom",
+    "avatars": {
+      "small": "/images/DrJeffMalcom.jpg",
+      "regular": "/images/DrJeffMalcom.jpg",
+      "large": "/images/DrJeffMalcom.jpg"
     },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
+    "handle": "@ChaosTheory"
   },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": {
-        "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
-        "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-        "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
-      },
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
+  "content": {
+    "text": "God creates dinosaurs, God destroys dinosaurs. God creates Man, man destroys God. Man creates dinosaurs..."
   },
-  {
-    "user": {
-      "name": "Johann von Goethe",
-      "avatars": {
-        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-      },
-      "handle": "@johann49"
+  "created_at": 1560278552379
+},
+{
+  "user": {
+    "name": "Grandmaster Jeff",
+    "avatars": {
+      "small": "/images/grandmasterJeff.jpg",
+      "regular": "/images/grandmasterJeff.jpg",
+      "large": "/images/grandmasterJeff.jpg"
     },
-    "content": {
-      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
+    "handle": "@TheGrandmaster"
+  },
+  "content": {
+    "text": "Ohhh! I don't like the 'S' word. No, no. We call them 'prisoners with jobs'."
+  },
+  "created_at": 1461116232227
+},
+{
+  "user": {
+    "name": "Jeff Brundle",
+    "avatars": {
+      "small": "/images/flyJeff.png",
+      "regular": "/images/flyJeff.png",
+      "large": "/images/flyJeff.png"
     },
-    "created_at": 1461113796368
-  }
+    "handle": "@FlyJeff"
+  },
+  "content": {
+    "text": "I'm saying... I'm saying I-- I'm an insect who dreamt he was a man and loved it. But now the dream is over... and the insect is awake."
+  },
+  "created_at": 1461116232227
+}
 ]
