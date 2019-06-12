@@ -99,9 +99,10 @@ $(document).ready(function () {
   for (let tweet of jeffData) {
     // Use an IIFE to render tweets one at a time
     let i = jeffData.indexOf(tweet);
+    const $tweets = $('#tweets');
     (function (i) {
       setTimeout(function () {
-        $('#tweets').append(createTweetElement(tweet).fadeIn(1200));
+        $tweets.append(createTweetElement(tweet).fadeIn(1200));
       }, 400 * i);
     })(i);
   }
