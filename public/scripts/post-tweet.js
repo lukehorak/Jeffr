@@ -1,16 +1,21 @@
 $(document).ready(function() {
-  var $button = $('#jeff-it');
+  const $button = $('#jeff-it');
   $button.on('click', function (event) {
     event.preventDefault();
     const serialized = $button.parent().serialize();
-    console.log('Button clicked, sending the Jeff...: ', serialized);
-    $.ajax({
+    const tweetLength = $button.siblings("textarea").val().length;
+    let error = (tweetLength > 140 ? "Too much Jeffness for one tweet. We can't handle that much Jeffness!" : tweetLength === 0 ? "There's no Jeffness here!" : undefined);
+    if(error) {
+      alert(error)
+;    }
+    else{
+      $.ajax({
       type: 'POST',
       url: '/tweets/',
       data: serialized,
       success: function(){
-        location.reload(true);
+        loadTweets();
       }
-    })
+    })}
   });
 })

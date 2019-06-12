@@ -16,35 +16,29 @@ createTweetElement = (tweetObj) => {
 return $('<article>').addClass("tweet").html(articleText)
 };
 
-function renderTweets(tweets) {
-  const $tweets = $('#tweets');
-  tweets.forEach( tweet => {
-    $tweets.append(createTweetElement(tweet));
-  });
+const loadTweets = () => {
+  $.ajax({
+    type:'GET',
+    url:'/tweets',
+    dataType: 'json'
+  })
+  .then(function(jeffData) {
+    // Sort Chronologically
+    $('#tweets').empty();
+    jeffData.sort( (a, b) => b.created_at - a.created_at);
+    for (let tweet of jeffData) {
+      // Use an IIFE to render tweets one at a time
+      let i = jeffData.indexOf(tweet);
+      const $tweets = $('#tweets');
+      (function (i) {
+        setTimeout(function () {
+          $tweets.append(createTweetElement(tweet).fadeIn(800));
+        }, 400 * i);
+      })(i);
+    }
+  })
 }
 
-$(document).ready(function () {
-  const loadTweets = () => {
-    $.ajax({
-      type:'GET',
-      url:'/tweets',
-      dataType: 'json'
-    })
-    .then(function(jeffData) {
-      // Sort Chronologically
-      jeffData.sort( (a, b) => b.created_at - a.created_at);
-      for (let tweet of jeffData) {
-        // Use an IIFE to render tweets one at a time
-        let i = jeffData.indexOf(tweet);
-        const $tweets = $('#tweets');
-        (function (i) {
-          setTimeout(function () {
-            $tweets.append(createTweetElement(tweet).fadeIn(1200));
-          }, 400 * i);
-        })(i);
-      }
-    })
-  }
-
+$("#tweets").ready(function () {
   loadTweets();
 });
