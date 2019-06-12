@@ -34,8 +34,15 @@
 
   <!-- Top nav bar (fixed) -->
   <nav id="nav-bar">
-    <img class="logo" src="/images/theJeff.png">
-    <span class="header">Jeffr</span>
+    <div>
+      <img class="logo" src="/images/theJeff.png">
+      <span class="header">Jeffr</span>
+    </div>
+    <div class="compose">
+      <i name="compose-tweet" class="fa fa-plus-square"></i>
+      <h2>Compose</h2>
+    </div>
+    
   </nav>
 
   <!-- Page-specific (main) content here -->
@@ -47,6 +54,8 @@
         <button type="submit" id="jeff-it">Jeff it</button>
         <span class="counter">140</span>
       </form>
+      <span id="erorr">
+      </span>
     </section>
     <section id="tweets">
     </section>
