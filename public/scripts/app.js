@@ -23,12 +23,12 @@ createTweetElement = (tweetObj) => {
   return $('<article>').addClass("tweet").html(articleText)
 };
 
-const renderTweets = (jeffData, tweets) => {
+const renderTweets = (jsonData, tweets) => {
   // Sort Chronologically
-  jeffData.sort((a, b) => b.created_at - a.created_at);
-  for (let tweet of jeffData) {
+  jsonData.sort((a, b) => b.created_at - a.created_at);
+  for (let tweet of jsonData) {
     // Use an IIFE to render tweets one at a time
-    let index = jeffData.indexOf(tweet);
+    let index = jsonData.indexOf(tweet);
     setTimeout(function () {
       tweets.append(createTweetElement(tweet).fadeIn(700));
     }, 50 * index);

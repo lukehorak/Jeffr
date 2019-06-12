@@ -8,8 +8,6 @@
 :root{
   --main-text-color: #691E06;
   --avatar-border-color: #BB4D00;
-
-  /* --background: #FBBA72; */
   --background: #dddddd;
   --mid-background: rgba(255,255,255, 0.2);
 
@@ -36,10 +34,10 @@ body {
 }
 
 main {
-  width: 450px;
+  width: 45%;
   margin: auto;
   background: var(--mid-background);
-  padding: 80px 1em 0;
+  padding: 10% 1em 0;
 }
 
 #tweets article{

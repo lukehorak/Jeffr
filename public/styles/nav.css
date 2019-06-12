@@ -4,6 +4,7 @@
   --top-grad: #CA5310;
   --nav-color: #691E06;
 
+  /*Since apparently I change my mind about color schemes hourly*/
   /* --bot-grad: #A24936;
   --top-grad: #D36135;
   --nav-color: #282B28;
@@ -11,7 +12,8 @@
 }
 
 #nav-bar {
-  height:80px;
+  /* height: 80px; */
+  height: 15%;
   width: 100%;
   background-image:linear-gradient(to top right, var(--bot-grad), var(--top-grad));
   color: black;
@@ -25,24 +27,24 @@
 }
 
 #nav-bar div{
-  height: 80px;
+  height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
 #nav-bar div .logo{
-  height: 80px;
-  margin-right:10px;
+  height: 100%;
+  margin-right:1em;
 }
 
 #nav-bar div .header{
-  font-size: 2em;
+  font-size: 4em;
   top: 50%;
 }
 
 #nav-bar div.compose{
-  height: 60px;
+  height: 3em;
   border: 2px solid var(--nav-color);
   padding: 0.5em;
   border-radius: 5px;
@@ -64,11 +66,11 @@
 
 #nav-bar div.compose i{
   color: var(--nav-color);
-  font-size: 2em;
+  font-size: 1em;
   margin-right: 0.3em;
 }
 
-#nav-bar div.compose h2{
+#nav-bar div.compose h3{
   color: var(--nav-color);
 }
 
