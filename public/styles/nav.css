@@ -1,39 +1,74 @@
 /* Because I've shuffled colour schemes 9001 times*/
 :root{
-  /* --bot-grad: #2A4747;
-  --top-grad: #439775;
-  --nav-color: #61D095; */
+  --bot-grad: #8F250C;
+  --top-grad: #CA5310;
+  --nav-color: #691E06;
 
-  --bot-grad: #A24936;
+  /* --bot-grad: #A24936;
   --top-grad: #D36135;
   --nav-color: #282B28;
+  --green: #83BCA9; */
 }
 
-nav {
+#nav-bar {
   height:80px;
   width: 100%;
   background-image:linear-gradient(to top right, var(--bot-grad), var(--top-grad));
-  color: var(--nav-color);
+  color: black;
   padding-left: 2em;
   padding-right: 2em;
-  display:inline-block;
+  display:flex;
+  justify-content: space-between;
   position:fixed;
+  align-items: center;
   z-index: 1;
 }
 
-#nav-bar .logo, .header {
-  float:left;
+#nav-bar div{
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-#nav-bar .logo{
+#nav-bar div .logo{
   height: 80px;
   margin-right:10px;
 }
 
-#nav-bar .header{
+#nav-bar div .header{
   font-size: 2em;
   top: 50%;
-  transform:translateY(-50%);
-  position:relative;
-  line-height: 100%;
 }
+
+#nav-bar div.compose{
+  height: 60px;
+  border: 2px solid var(--nav-color);
+  padding: 0.5em;
+  border-radius: 5px;
+  background-color: rgba(255,255,255, 0.5);
+}
+
+#nav-bar div.compose:hover{
+  background-color: var(--nav-color);
+}
+
+#nav-bar div.compose:hover h2{
+  color: rgba(255,255,255, 0.5);
+}
+
+/*For some reason " h2, i" does not work above, so...*/
+#nav-bar div.compose:hover i{
+  color: rgba(255,255,255, 0.5);
+}
+
+#nav-bar div.compose i{
+  color: var(--nav-color);
+  font-size: 2em;
+  margin-right: 0.3em;
+}
+
+#nav-bar div.compose h2{
+  color: var(--nav-color);
+}
+
