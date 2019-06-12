@@ -78,6 +78,7 @@ main {
 #tweets article header img{
   width: 70px;
   height: 70px;
+  object-fit: cover;
   border-radius: 5px;
   border: 0.1em solid var(--avatar-border-color);
   margin-right: 1em;
