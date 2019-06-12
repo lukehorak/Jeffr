@@ -7,7 +7,10 @@ $(document).ready(function() {
     $.ajax({
       type: 'POST',
       url: '/tweets/',
-      data: serialized
+      data: serialized,
+      success: function(){
+        location.reload(true);
+      }
     })
   });
 })
