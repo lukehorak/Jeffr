@@ -27,3 +27,15 @@
 .new-tweet .counter {
   float:right;
 }
+
+.counter[data-status=over] {
+  color: red;
+}
+
+.counter[data-status=under] {
+  color: var(--main-text-color);
+}
+
+.counter[data-status=warn]{
+  color: goldenrod;
+}
