@@ -45,12 +45,6 @@ const jeffData = [{
   }
 ];
 
-function escape(str) {
-  var div = document.createElement('div');
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-}
-
 createLikeShare = () => {
   const $flag = $("<i>").addClass("fa fa-flag");
   const $retweet = $("<i>").addClass("fa fa-retweet");
@@ -59,35 +53,27 @@ createLikeShare = () => {
 }
 
 createTweetElement = (tweetObj) => {
-
-  // Create profile div
-  const $img = $("<img>").attr("src", tweetObj.user.avatars.regular);
-  const $name = $("<h2>").text(tweetObj.user.name);
-  const $prof = $("<div>").addClass("profile").append($img, $name);
-
-  // Create handle and builld <header>
-  const $handle = $(`<span>`).text(tweetObj.user.handle).addClass("handle");
-  const $header = $("<header>").append($prof, $handle);
-
-  // Tweet content
-  const $tweetText = $("<p>").text(tweetObj.content.text).addClass("tweet-content");
-
-  // Footer
-
-  const $timestamp = $("<p>").text(timeAgo(tweetObj.created_at)).addClass("timestamp");
-  const $likeShare = createLikeShare();
-  const $footer = $("<footer>").append($timestamp, $likeShare);
-
-  const $tweet = $("<article>").addClass("tweet").append($header, $tweetText, $footer);
-
-  return $tweet;
+  // Template Literal
+ const articleText =`
+  <header>
+    <div class="profile"><img src="${tweetObj.user.avatars.regular}">
+      <h2>${tweetObj.user.name}</h2>
+    </div><span class="handle">${tweetObj.user.handle}</span>
+  </header>
+  <p class="tweet-content">${tweetObj.content.text}</p>
+  <footer>
+    <p class="timestamp">${timeAgo(tweetObj.created_at)}</p>
+    <div class="like-share"><i class="fa fa-flag"></i><i class="fa fa-retweet"></i><i class="fa fa-heart"></i></div>
+  </footer>`
+  
+return $('<article>').addClass("tweet").html(articleText)
 };
 
 function renderTweets(tweets) {
   const $tweets = $('#tweets');
-  for (var tweet in tweets) {
-    $tweets.append(createTweetElement(tweets[tweet]));
-  }
+  tweets.forEach( tweet => {
+    $tweets.append(createTweetElement(tweet));
+  });
 }
 
 $(document).ready(function () {
