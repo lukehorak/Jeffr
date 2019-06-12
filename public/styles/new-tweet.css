@@ -5,6 +5,8 @@
   padding:0.5em;
   margin-top: 1em;
   margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .new-tweet textarea{
