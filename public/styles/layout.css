@@ -73,7 +73,6 @@ main {
 #tweets article header .handle{
   margin: 0.5em 0.5em;
   color: #aaaaaa;
-  float: right;
 }
 
 #tweets article header img{
