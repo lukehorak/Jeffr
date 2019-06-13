@@ -37,7 +37,7 @@ main {
   width: 45%;
   margin: auto;
   background: var(--mid-background);
-  padding: 6em 1em 0;
+  padding: 8em 1em 0;
 }
 
 #tweets article{
