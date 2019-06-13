@@ -1,8 +1,14 @@
-# Tweeter Project
+!["Login Page"](https://github.com/lukehorak/jeffr/)
+# Jeffr 
 
-Jeffr is a simple, single-page, Jeff Goldblum-themed Twitter clone. (Jeffness provided courtesy of [Jeffsum](https://github.com/chlorophyllkid/jeffsum))
+Jeffr is a simple, single-page, Jeff Goldblum-themed Twitter clone. The original requirements for this project asked us to develop a SPA twitter clone, however left much of the styling up to us. As any sane person would do, I took this as an opportunity to demonstrate the greatness of Jeff Goldblum.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Screenshots
+Initial Page
+!["Main Page"](https://github.com/lukehorak/jeffr/)
+Page with Compose
+!["Link Page"](https://github.com/lukehorak/jeffr/)
+
 
 ## Getting Started
 
@@ -15,3 +21,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body-parser: 1.15.2 or above
+- chance: 1.0.2 or above
+- md5: 2.1.0 or above
+- mongodb: 2.2.36 or above
+- nodemon: 1.19.1 or above
