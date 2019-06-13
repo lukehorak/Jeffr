@@ -13,7 +13,7 @@
 
 #nav-bar {
   /* height: 80px; */
-  height: 20%;
+  height: 150px;
   width: 100%;
   background-image:linear-gradient(to top right, var(--bot-grad), var(--top-grad));
   color: black;
@@ -38,7 +38,7 @@
 }
 
 #nav-bar div .header{
-  font-size: 4em;
+  font-size: 2em;
   /*top: 50%; */
 }
 

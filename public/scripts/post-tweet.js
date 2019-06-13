@@ -31,6 +31,7 @@ $(document).ready(function () {
         })
         .then(function () {
           $(".new-tweet textarea").val("");
+          $(".new-tweet .counter").text(140);
           // Calling loadTweets() again in case another user had tweeted between when the page was loaded and a new tweet was submitted
           loadTweets();
         })

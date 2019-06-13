@@ -9,29 +9,22 @@ module.exports = {
 
   generateRandomUser: () => {
     const gender    = chance.gender();
-    const firstName = chance.first({gender: gender});
+    // const firstName = chance.first({gender: gender});
     const lastName  = chance.last();
-    const userName  = firstName + " " + lastName;
+    const userName  = "Jeff " + lastName;
 
-    let userHandle = "@";
-    if (Math.random() > 0.5) {
-      let prefix    = chance.prefix({gender: gender});
-      prefix = prefix.replace(".", "");
-      userHandle += prefix
-    }
+    let userHandle = "@Jeff";
 
-    userHandle += lastName;
 
-    if (Math.random() > 0.5) {
-      const suffix = Math.round(Math.random() * 100);
-      userHandle += suffix;
-    }
+    const suffix = Math.round(Math.random() * 1000);
+    userHandle += suffix;
 
-    const avatarUrlPrefix = `https://vanillicon.com/${md5(userHandle)}`;
+    const jeffNumber = Math.round(Math.random() * 6 + 1);
+    const avatarUrl = `/images/RandomJeffs/Jeff${jeffNumber}.png`;
     const avatars = {
-      small:   `${avatarUrlPrefix}_50.png`,
-      regular: `${avatarUrlPrefix}.png`,
-      large:   `${avatarUrlPrefix}_200.png`
+      small:   avatarUrl,
+      regular: avatarUrl,
+      large:   avatarUrl
     }
 
     return {

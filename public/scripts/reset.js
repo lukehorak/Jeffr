@@ -5,6 +5,7 @@ $(document).ready(function(){
 
   $('.compose').on("click", function(){
     $('html, body').animate({scrollTop: 0},'slow');
+    $('.new-tweet').removeClass("start");
     $(".new-tweet textarea").focus();
   })
 })
