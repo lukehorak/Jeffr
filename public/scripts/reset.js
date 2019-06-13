@@ -4,9 +4,7 @@ $(document).ready(function(){
   })
 
   $('.compose').on("click", function(){
-    $('html, body').animate({
-      scrollTop: $(".new-tweet").offset().top - 140},
-      'slow');
+    $('html, body').animate({scrollTop: 0},'slow');
     $(".new-tweet textarea").focus();
   })
 })
