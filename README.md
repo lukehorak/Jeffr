@@ -9,6 +9,9 @@ Initial Page
 Page with Compose
 !["Link Page"](https://github.com/lukehorak/Jeffr/blob/master/public/images/Screenshots/JeffrWithCompose.png?raw=true)
 
+## Extra Features
+
+In addition to the requirements, the user-helper file has been modified to generate random Jeffs as demo users instead of the normal random users! The first name is always Jeff, their handle is always @JeffX where 'X' is a random integer, and their profile picture is randomly selected from a pool of wonderful Jeff pictures. Enjoy the Jeffness!
 
 ## Getting Started
 
