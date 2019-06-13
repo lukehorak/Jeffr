@@ -1,13 +1,13 @@
-!["Login Page"](https://github.com/lukehorak/jeffr/)
+!["Login Page"](https://github.com/lukehorak/Jeffr/blob/master/public/images/JeffrLogoSmall.png?raw=true)
 # Jeffr 
 
 Jeffr is a simple, single-page, Jeff Goldblum-themed Twitter clone. The original requirements for this project asked us to develop a SPA twitter clone, however left much of the styling up to us. As any sane person would do, I took this as an opportunity to demonstrate the greatness of Jeff Goldblum.
 
 ## Screenshots
 Initial Page
-!["Main Page"](https://github.com/lukehorak/jeffr/)
+!["Main Page"](https://github.com/lukehorak/Jeffr/blob/master/public/images/Screenshots/JeffrHome.png?raw=true)
 Page with Compose
-!["Link Page"](https://github.com/lukehorak/jeffr/)
+!["Link Page"](https://github.com/lukehorak/Jeffr/blob/master/public/images/Screenshots/JeffrWithCompose.png?raw=true)
 
 
 ## Getting Started
