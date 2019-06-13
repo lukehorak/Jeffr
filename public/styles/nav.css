@@ -48,20 +48,20 @@
   border: 2px solid var(--nav-color);
   padding: 0.5em;
   border-radius: 5px;
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(255,255,255, 0.6);
 }
 
 #nav-bar div.compose:hover{
   background-color: var(--nav-color);
 }
 
-#nav-bar div.compose:hover h2{
-  color: rgba(255,255,255, 0.5);
+#nav-bar div.compose:hover h3{
+  color: rgba(255,255,255, 0.6);
 }
 
 /*For some reason " h2, i" does not work above, so...*/
 #nav-bar div.compose:hover i{
-  color: rgba(255,255,255, 0.5);
+  color: rgba(255,255,255, 0.6);
 }
 
 #nav-bar div.compose i{
