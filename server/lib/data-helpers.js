@@ -22,11 +22,11 @@ module.exports = function makeDataHelpers(db) {
       }
       return errorMessage.trim();
     },
+    // Returns Id if taken, undefined if not taken, so the result can be used as a conditional or getter
     propertyTakenBy: async function(propName, resource, property){
       const query = {[propName]: property};
-      let result = await db.collection(resource).count(query)
-
-      return (result > 0 );
+      let result = await db.collection(resource).find(query, {"_id":1}).toArray();
+      return (result[0] ? result[0]._id : undefined );
     },
     ////////////////////////////////////////////////////////////////////////////
     // Getters and Setters
@@ -61,7 +61,8 @@ module.exports = function makeDataHelpers(db) {
       console.log(`Getting user ${user}`);
       try{
         const objectID = new mongo.ObjectID(user)
-        db.collection("users").find({"_id": objectID}, {password: 0}).toArray(callback);
+        db.collection("users").find({"_id": objectID}).toArray(callback);
+        //callback(null, db.collection("users").findOne({"_id": objectID}, {password: 0}));
       }
       catch(e){
         callback(e)

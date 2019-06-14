@@ -21,7 +21,9 @@ module.exports = function(DataHelpers) {
         console.log(`Cannot find user with id ${req.params.id}`);
         res.status(500).json({ error: err.message });
       } else {
-        res.json(user);
+        let redactedResp = user[0];
+        delete redactedResp.password;
+        res.json(redactedResp);
       }
     })
   });

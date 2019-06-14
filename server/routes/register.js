@@ -2,7 +2,6 @@
 
 const express = require('express');
 const registerRoutes = express.Router();
-const bcrypt = require('bcrypt');
 const cookieSession = require('cookie-session');
 
 registerRoutes.use(cookieSession({
@@ -14,15 +13,7 @@ registerRoutes.use(cookieSession({
 module.exports = function (DataHelpers) {
   // TODO - make widget, return json for it here?
   registerRoutes.get("/", function (req, res) {
-    DataHelpers.registerWidget((err, users) => {
-      if (err) {
-        res.status(500).json({
-          error: err.message
-        });
-      } else {
-        res.json(users);
-      }
-    });
+
   });
 
   registerRoutes.post("/", async function (req, res) {
@@ -34,7 +25,7 @@ module.exports = function (DataHelpers) {
 
     // async function to check if email is taken
     let emailIsTaken = await DataHelpers.propertyTakenBy("email", "users", email);
-    let handleIsTaken = await DataHelpers.propertyTakenBy("handle", "users", handle);
+    let handleisTaken = await DataHelpers.propertyTakenBy("handle", "users", handle);
 
     // Input validation // TODO [Refactor] - Helper function? 
     if (!email || !password) {
@@ -60,7 +51,6 @@ module.exports = function (DataHelpers) {
             error: err.message
           });
         } else {
-          // res.json(response);
           req.session["user_id"] = response;
           res.sendStatus(200);
         }
