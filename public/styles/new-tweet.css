@@ -3,9 +3,10 @@ main > .start{
 }
 
 .new-tweet{
-  border: 0.07em solid #aaaaaa;
+  /* border: 0.07em solid #aaaaaa; */
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #ececec;
+  /* background-color: #ffffff; */
   padding:0.5em;
   margin: 1em auto;
   width: 95%;
@@ -18,8 +19,17 @@ main > .start{
   width: 99%;
 }
 
+.new-tweet #tweet-form{
+  display:flex;
+  flex-direction: column;
+}
+
 .new-tweet textarea{
-  width: 100%
+  width: 90%;
+  height: 5em;
+  margin: 0 auto 1em;
+  outline: none;
+  resize: none;
 }
 
 .new-tweet h2:after{
