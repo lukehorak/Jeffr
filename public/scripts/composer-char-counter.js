@@ -5,6 +5,6 @@ $(document).ready(function(){
     
     // Red for over, goldenrod for < 10
     const status = charsLeft < 0 ? 'over' : charsLeft < 10 ? 'warn' : 'under';
-    $(this).siblings('.counter').text(charsLeft).attr('data-status', status);
+    $('.counter').text(charsLeft).attr('data-status', status);
   })
 });
