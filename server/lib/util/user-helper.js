@@ -9,7 +9,6 @@ module.exports = {
 
   generateRandomUser: () => {
     const gender    = chance.gender();
-    // const firstName = chance.first({gender: gender});
     const lastName  = chance.last();
     const userName  = "Jeff " + lastName;
 
