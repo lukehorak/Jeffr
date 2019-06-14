@@ -14,9 +14,6 @@ const MONGODB_URI = "mongodb://localhost:27017/jeffr";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// The in-memory database of tweets. It's a basic object with an array in it.
-const db = require("./lib/in-memory-db");
-
 MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err) {
     console.log(`Error when connecting to ${MONGODB_URI}:`);
@@ -34,7 +31,7 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   // Mount the tweets routes at the "/tweets" path prefix:
   app.use("/tweets", tweetsRoutes);
   app.use("/users", userRoutes);
-  app.use("/register", registerRoutes)
+  app.use("/register", registerRoutes);
 
   app.listen(PORT, () => {
     console.log("Example app listening on port " + PORT);

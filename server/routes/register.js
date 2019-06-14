@@ -3,9 +3,16 @@
 const express = require('express');
 const registerRoutes = express.Router();
 const bcrypt = require('bcrypt');
+const cookieSession = require('cookie-session');
+
+registerRoutes.use(cookieSession({
+  name: 'session',
+  keys: ['keyX'],
+  maxAge: 24 * 60 * 60 * 1000
+}))
 
 module.exports = function (DataHelpers) {
-
+  // TODO - make widget, return json for it here?
   registerRoutes.get("/", function (req, res) {
     DataHelpers.registerWidget((err, users) => {
       if (err) {
@@ -29,6 +36,7 @@ module.exports = function (DataHelpers) {
     let emailIsTaken = await DataHelpers.propertyTakenBy("email", "users", email);
     let handleIsTaken = await DataHelpers.propertyTakenBy("handle", "users", handle);
 
+    // Input validation // TODO [Refactor] - Helper function? 
     if (!email || !password) {
       const errorMessage = DataHelpers.errorMessageBuilder(email, password);
       res.status(400).json({
@@ -52,7 +60,9 @@ module.exports = function (DataHelpers) {
             error: err.message
           });
         } else {
-          res.json(response);
+          // res.json(response);
+          req.session["user_id"] = response;
+          res.sendStatus(200);
         }
       });
     }

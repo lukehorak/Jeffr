@@ -82,8 +82,9 @@ module.exports = function makeDataHelpers(db) {
         password: bcrypt.hashSync(password, 10)
       }
       try{
-        db.collection("users").insertOne(newUser);
-        callback(null);
+        db.collection("users").insert(newUser, function (err, docInserted){
+          callback(err, docInserted.ops[0]._id);
+        });
       }
       catch (e){
         callback(e)
