@@ -3,10 +3,8 @@ main > .start{
 }
 
 .new-tweet{
-  /* border: 0.07em solid #aaaaaa; */
   border-radius: 5px;
   background-color: #ececec;
-  /* background-color: #ffffff; */
   padding:0.5em;
   margin: 1em auto;
   width: 95%;
