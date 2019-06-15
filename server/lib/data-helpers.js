@@ -90,7 +90,13 @@ module.exports = function makeDataHelpers(db) {
       catch (e){
         callback(e)
       }
-
+    },
+    cleanUserJSON: function(userObj){
+      return {
+        name: userObj.name,
+        handle: userObj.handle,
+        avatars: userObj.avatars
+      };
     }
 
   };

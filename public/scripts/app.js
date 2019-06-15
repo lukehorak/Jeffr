@@ -48,6 +48,8 @@ const loadTweets = () => {
     })
 }
 
+// TODO - MANIPULATE FRONT END DEPENDING ON LOGGED IN STATUS
+
 $(document).ready(function () {
   loadTweets();
 });

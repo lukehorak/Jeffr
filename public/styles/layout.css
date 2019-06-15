@@ -36,11 +36,19 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+.fa-window-close {
+  color: #aaa;
+  float: right;
+  font-size: 1em;
+  color: red;
+}
+
 main {
   width: 50%;
   margin: 0 auto;
   background: var(--mid-background);
   padding: 150px 1em 0;
+  z-index: -1;
 }
 
 #tweets{

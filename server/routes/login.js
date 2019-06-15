@@ -12,9 +12,8 @@ loginRoutes.use(cookieSession({
 }))
 
 module.exports = function (DataHelpers) {
-  // TODO - make widget, return json for it here?
   loginRoutes.get("/", function (req, res) {
-
+    res.json({form: "login", buttonText: "Log In", buttonClass: "submit-login"});
   });
 
   loginRoutes.post("/", async function (req, res) {
@@ -42,12 +41,7 @@ module.exports = function (DataHelpers) {
         } else {
           if (bcrypt.compareSync(password, user[0].password)) {
             req.session["user_id"] = user_id;
-            const userObj = {
-              name: user[0].name,
-              handle: user[0].handle,
-              avatars: user[0].avatars
-            };
-            res.json(userObj);
+            res.redirect('/');
           } else {
             res.status(401).json({
               error: "Wrong Email or Password!"

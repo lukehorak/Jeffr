@@ -11,21 +11,22 @@ registerRoutes.use(cookieSession({
 }))
 
 module.exports = function (DataHelpers) {
-  // TODO - make widget, return json for it here?
-  registerRoutes.get("/", function (req, res) {
 
+  registerRoutes.get("/", function (req, res) {
+    res.json({form: "register", buttonText: "Create Account", buttonClass: "submit-register"});
   });
 
   registerRoutes.post("/", async function (req, res) {
     const {
       email,
       password,
+      name,
       handle
     } = req.body;
 
     // async function to check if email is taken
     let emailIsTaken = await DataHelpers.propertyTakenBy("email", "users", email);
-    let handleisTaken = await DataHelpers.propertyTakenBy("handle", "users", handle);
+    let handleIsTaken = await DataHelpers.propertyTakenBy("handle", "users", handle);
 
     // Input validation // TODO [Refactor] - Helper function? 
     if (!email || !password) {
@@ -52,7 +53,7 @@ module.exports = function (DataHelpers) {
           });
         } else {
           req.session["user_id"] = response;
-          res.sendStatus(200);
+          res.redirect('/');
         }
       });
     }
